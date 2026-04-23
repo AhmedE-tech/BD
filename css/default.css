@@ -1,0 +1,178 @@
+/* ===== Google Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap');
+
+/* ===== Reset & Base ===== */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff9f0;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+/* ===== Layout wrappers ===== */
+#mainDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* ===== Cake / Canvas ===== */
+#loveHeart {
+    position: relative;
+    width: 670px;
+    height: 625px;
+    flex-shrink: 0;
+}
+
+#garden {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* =======================================================================
+   UPPER EMPTY ZONE — countdown clock
+   The cake's upper clear space sits roughly between 47%–56% of canvas height.
+   Center the block at ~50%.
+======================================================================= */
+#messages {
+    display: none;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.5;
+    width: 320px;
+}
+
+#elapseClock {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#elapseClock .digit {
+    font-family: 'digit', monospace;
+    font-size: 22px;
+    color: #c0392b;
+}
+
+/* Quiet "it's today" note — no drama */
+#birthdayNow {
+    display: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    font-style: italic;
+    color: #b08080;
+    margin-top: 4px;
+    letter-spacing: 0.04em;
+    opacity: 0.7;
+}
+
+/* =======================================================================
+   LOWER EMPTY ZONE — personal quote
+   The cake's lower clear space sits roughly between 68%–80%.
+   Center vertically at ~72%.
+======================================================================= */
+#loveu {
+    display: none;
+    position: absolute;
+    top: 77%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.7;
+    color: #333;
+    width: 430px;
+    max-width: 90%;
+}
+
+#loveu .signature {
+    margin-top: 8px;
+    font-size: 15px;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: #c0392b;
+}
+
+/* ===== Copyright ===== */
+#copyright {
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    color: #999;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+/* ===== Error ===== */
+#errorMsg {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    color: #5a3030;
+}
+
+/* =======================================================================
+   MOBILE — scale the cake to fill the viewport width
+======================================================================= */
+@media (max-width: 700px) {
+    body { overflow: auto; }
+
+    #loveHeart {
+        /* Scale proportionally: 670×625 aspect = 1.072 */
+        width: 100vw;
+        height: calc(100vw / 1.072);
+    }
+
+    #messages {
+        font-size: 12px;
+        width: 58%;
+    }
+
+    #elapseClock { font-size: 12px; }
+    #elapseClock .digit { font-size: 18px; }
+
+    #loveu {
+        font-size: 12px;
+        width: 60%;
+    }
+
+    #loveu .signature { font-size: 12px; }
+}
