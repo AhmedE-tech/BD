@@ -168,8 +168,8 @@ body {
     #loveHeart {
         width: 125vw;
         height: calc(125vw / 1.072);
-        /* Centered = -12.5vw, nudge 3vw right → -9.5vw */
-        margin-left: -9.5vw;
+        /* Centered = -12.5vw, nudge right → -8.5vw */
+        margin-left: -8.5vw;
     }
 
     /* ---- Upper zone: countdown ---- */
@@ -195,7 +195,7 @@ body {
 
     /* ---- Lower zone: quote ---- */
     #loveu {
-        top: 78%;
+        top: 73%;
         font-size: 2.8vw;
         width: 48%;
         line-height: 1.45;
