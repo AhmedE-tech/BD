@@ -150,7 +150,9 @@ body {
 }
 
 /* =======================================================================
-   MOBILE — scale the cake to fill the viewport width
+   MOBILE — text must scale with the cake
+   At 400px viewport the cake is ~60% of desktop size, so all text
+   must shrink proportionally using vw units.
 ======================================================================= */
 @media (max-width: 700px) {
     body {
@@ -159,40 +161,45 @@ body {
     }
 
     #loveHeart {
-        /* Proportional: 670×625 ≈ 1.072 aspect ratio */
         width: 100vw;
         height: calc(100vw / 1.072);
     }
 
-    /* Upper zone: countdown — same % positions work since cake scales */
+    /* ---- Upper zone: countdown ---- */
     #messages {
-        font-size: 11px;
-        width: 70%;
+        font-size: 2.6vw;
+        width: 48%;
     }
 
     #elapseClock {
-        font-size: 11px;
-        margin-top: 4px;
+        font-size: 2.4vw;
+        margin-top: 0.5vw;
     }
 
     #elapseClock .digit {
-        font-size: 16px;
+        font-size: 3.8vw;
     }
 
-    /* Lower zone: quote */
+    /* ---- "it's today" note ---- */
+    #birthdayNow {
+        font-size: 2vw;
+        margin-top: 0.3vw;
+    }
+
+    /* ---- Lower zone: quote ---- */
     #loveu {
-        font-size: 11px;
-        width: 75%;
-        line-height: 1.5;
+        font-size: 2.4vw;
+        width: 52%;
+        line-height: 1.45;
     }
 
     #loveu .signature {
-        font-size: 12px;
-        margin-top: 4px;
+        font-size: 2.8vw;
+        margin-top: 0.6vw;
     }
 
     #copyright {
-        font-size: 10px;
-        margin-top: 6px;
+        font-size: 2.4vw;
+        margin-top: 4px;
     }
 }
