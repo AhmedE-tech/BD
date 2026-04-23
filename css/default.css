@@ -168,10 +168,8 @@ body {
     #loveHeart {
         width: 120vw;
         height: calc(120vw / 1.072);
-        /* Center the oversized container */
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
+        /* Center: pull left by half the overflow (120-100)/2 = 10vw */
+        margin-left: -10vw;
     }
 
     /* ---- Upper zone: countdown ---- */
