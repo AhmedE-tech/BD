@@ -171,7 +171,7 @@ body {
         width: 125vw;
         height: calc(125vw / 1.072);
         /* Centered = -12.5vw, nudge right → -8.5vw */
-        margin-left: -3.5vw;
+        margin-left: -1.5vw;
     }
 
     /* ---- Upper zone: countdown ---- */
