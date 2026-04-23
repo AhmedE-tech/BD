@@ -166,10 +166,10 @@ body {
     }
 
     #loveHeart {
-        width: 120vw;
-        height: calc(120vw / 1.072);
-        /* Center: pull left by half the overflow (120-100)/2 = 10vw */
-        margin-left: -10vw;
+        width: 125vw;
+        height: calc(125vw / 1.072);
+        /* Centered = -12.5vw, but nudge 2vw right → -10.5vw */
+        margin-left: -10.5vw;
     }
 
     /* ---- Upper zone: countdown ---- */
