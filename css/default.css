@@ -153,26 +153,46 @@ body {
    MOBILE — scale the cake to fill the viewport width
 ======================================================================= */
 @media (max-width: 700px) {
-    body { overflow: auto; }
+    body {
+        overflow: auto;
+        min-height: 100dvh;
+    }
 
     #loveHeart {
-        /* Scale proportionally: 670×625 aspect = 1.072 */
+        /* Proportional: 670×625 ≈ 1.072 aspect ratio */
         width: 100vw;
         height: calc(100vw / 1.072);
     }
 
+    /* Upper zone: countdown — same % positions work since cake scales */
     #messages {
-        font-size: 12px;
-        width: 58%;
+        font-size: 11px;
+        width: 70%;
     }
 
-    #elapseClock { font-size: 12px; }
-    #elapseClock .digit { font-size: 18px; }
+    #elapseClock {
+        font-size: 11px;
+        margin-top: 4px;
+    }
 
+    #elapseClock .digit {
+        font-size: 16px;
+    }
+
+    /* Lower zone: quote */
     #loveu {
-        font-size: 12px;
-        width: 60%;
+        font-size: 11px;
+        width: 75%;
+        line-height: 1.5;
     }
 
-    #loveu .signature { font-size: 12px; }
+    #loveu .signature {
+        font-size: 12px;
+        margin-top: 4px;
+    }
+
+    #copyright {
+        font-size: 10px;
+        margin-top: 6px;
+    }
 }
